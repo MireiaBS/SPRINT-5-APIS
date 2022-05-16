@@ -12,7 +12,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20cm;
+    height: 14cm;
 }
 .div1 {
     
@@ -44,4 +44,14 @@ body {
 .txt2 {
     text-shadow: 0px 0px 12px rgb(200, 92, 216);
     font-size: 20px;
+}
+#cloud {
+    height: 2cm;
+    width: 2cm;
+    margin-bottom: -0.5cm;
+}
+
+.icon_weather {
+    margin: 1cm;
+    
 }

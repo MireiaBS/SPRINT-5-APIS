@@ -7,27 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sprint 5 - Acudits!</title>
     <link rel="stylesheet" type="text/css" href="/styles.css">
-    <script src="main.js" type="module"></script>
-    <script src="joke_class.js"></script>
+    
 </head>
 
 <body class="img">
-    <div id="weather"> </div>
+    <div class="icon_weather">
+        <img id='cloud' src="/img/cloudy.png">
+        <p id="weather"></p>
+    </div>  
     <div class="container">
         <div class="div1">
             <h1 class="txt1"> Best Jokes Ever!</h1>
             <div id="acudit"></div>
             <div>
-                <p class="txt2"> Rate it:
+                <div class="txt2"> Rate it:
                     <input type='button' class="btn1" value="1" onclick="rateJoke(1)"></input>
                     <input type='button' class="btn1" value="2" onclick="rateJoke(2)"></input>
                     <input type='button' class="btn1" value="3" onclick="rateJoke(3)"></input>
                     <input type='button' class="btn1" value="Next Joke" onclick="nextJoke()"></input>
-                </p>
+                </div>
             </div>
-        </div>
-        
+        </div>        
     </div>
+    
+    <script src="main.js" type="module"></script>
+    <script src="joke_class.js"></script>
 </body>
 
 </html>

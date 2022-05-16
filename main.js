@@ -1,30 +1,30 @@
 import API_KEY from "./api.js";
 
 const API_URL_JOKE1 = "https://icanhazdadjoke.com/";
-const API_URL_WEATHER = "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid="+API_KEY;
+const API_URL_WEATHER = "http://api.openweathermap.org/data/2.5/weather?lat=41.3870&lon=2.16992&appid="+API_KEY+"&units=metric";
 
 const date = new Date();
-let text = date.toISOString()
+let text = date.toISOString();
 console.log(text);
 
+let dataResult;
 let reportAcudits = [];
-let  dataResult;
-
 
 // <------------------ API WEATHER -------------------->
+
 fetch(API_URL_WEATHER, {
-    method: "get",
-    headers: {
-      Accept: "application/JSON",
-    },
+  method: "get",
+  headers: {
+    Accept: "application/JSON",
+  },
+})
+  .then((response) => response.json())
+  .then((data) => { 
+    const weather = document.getElementById("weather");
+    weather.innerHTML = data.name.toUpperCase() + ', BARCELONA <br>' + data.main.temp + 'ºC';
+    console.log(data);         
   })
-    .then((response) => response.json())
-    .then((data) => {      
-      const weather = document.getElementById("weather");
-      weather.innerHTML = data.city;
-      console.log(data);         
-    })
-    .catch((err) => console.log(err));    
+  .catch((err) => console.log(err));  
 
 
 // <------------------ API JOKE'S ---------------------->
@@ -44,7 +44,9 @@ function nextJoke() {
     })
     .catch((err) => console.log(err));    
 }
+
 // <------------ API JOKE'S CHUCK NORRIS--------------->
+
 
 function rateJoke(rate) {    
 
@@ -57,7 +59,7 @@ function rateJoke(rate) {
       reportAcudits.pop()
       newJoke = new Joke(dataResult.joke,rate,text);
       reportAcudits.push(newJoke);
-      
+
     } else {
       newJoke = new Joke(dataResult.joke,rate,text);
       reportAcudits.push(newJoke);
@@ -65,3 +67,4 @@ function rateJoke(rate) {
   } 
   console.log(reportAcudits);
 }
+
