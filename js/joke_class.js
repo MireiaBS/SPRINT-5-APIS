@@ -6,3 +6,5 @@ class Joke {
         this.date = date;
     }
 }
+
+export default Joke;
