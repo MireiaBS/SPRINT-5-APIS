@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sprint 5 - Acudits!</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    
+        
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>   
 </head>
 
 <body class="img">
@@ -21,16 +23,15 @@
             <div id="acudit"></div>
             <div>
                 <div class="txt2"> Rate it:
-                    <input type='button' class="btn1" value="1" onclick="rateJoke(1)"></input>
-                    <input type='button' class="btn1" value="2" onclick="rateJoke(2)"></input>
-                    <input type='button' class="btn1" value="3" onclick="rateJoke(3)"></input>
-                    <input type='button' class="btn1" value="Next Joke" onclick="nextJoke()"></input>
-                </div>
+                    <input type='button' class="btn1" value="1" onclick="rateJoke(1,dataResult)">
+                    <input type='button' class="btn1" value="2" onclick="rateJoke(2,dataResult)">
+                    <input type='button' class="btn1" value="3" onclick="rateJoke(3,dataResult)">
+                    <input type='button' id='btn1' class="btn1" value="Next Joke" onclick="nextJoke(1)">
             </div>
         </div>        
     </div>
     
-    <script src="js/main.js" type="module"></script>
+    
     
 </body>
 
