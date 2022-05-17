@@ -16,6 +16,7 @@ let reportAcudits = [];
 let num = 0;
 
 // <------------ JOKE'S CLASS --------------->
+
 class Joke {
   constructor(joke, score, date) {
     this.joke = joke;
@@ -42,6 +43,7 @@ function getWeather() {
     })
     .catch((err) => console.log(err));
 }
+
 // <------------ GET RANDOM JOKES --------------->
 
 function nextJoke(number) {
